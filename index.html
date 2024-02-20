@@ -92,28 +92,28 @@
           <div class="flex justify-between w-3/4">
             <button class="btn glass text-white text-xl hover:bg-black">
               Life
-              <span><img src="./images/life-icon.svg" alt="Life-icon" /></span>1
+              <span><img src="./images/life-icon.svg" alt="Life-icon" /></span> <span id="gem">5</span>
             </button>
             <button class="btn glass text-white text-xl hover:bg-black">
               Score
               <span
                 ><img src="./images/dollar-icon.svg " alt="dollar-icon" /></span
-              >1
+              > <span id="score">0</span>
             </button>
           </div>
         </div>
       </section>
-      <section
-        class="score flex justify-center items-center flex-col min-h-screen hidden"
+      <section id="scoreCard"
+        class=" flex justify-center items-center flex-col min-h-screen hidden"
       >
         <div
           class="flex flex-col items-center bg-gradient-to-r from-[#003049] to-[#ccd5ae] text-black rounded-lg p-14"
         >
           <h1 class="text-8xl">
             <span class="font-extrabold">Score:</span>
-            <span class="font-medium">1</span>
+            <span id="finalScore" class="font-medium">1</span>
           </h1>
-          <button
+          <button onclick="playAgain()"
             class="btn glass text-black font-bold bg-[#003049] hover:bg-white my-6"
           >
             Play Again

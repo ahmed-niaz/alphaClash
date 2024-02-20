@@ -10,19 +10,33 @@ function showElement(elementID) {
   element.classList.remove(`hidden`);
 }
 
-function addBgColor(elementID){
-    // const element = document.getElementById(elementID);
-    const element = document.querySelector(`#${elementID}`);
-    element.classList.add(`bg-rose-950`);
-    element.classList.add(`text-white`);
-    element.classList.add(`font-bold`)
+function addBgColor(elementID) {
+  // const element = document.getElementById(elementID);
+  const element = document.querySelector(`#${elementID}`);
+  element.classList.add(`bg-rose-950`);
+  element.classList.add(`text-white`);
+  element.classList.add(`font-bold`);
 }
 
+function removeBgColor(elementID) {
+  // const element = document.getElementById(elementID);
+  const element = document.querySelector(`#${elementID}`);
+  element.classList.remove(`bg-rose-950`);
+  element.classList.remove(`text-white`);
+  element.classList.remove(`font-bold`);
+}
 
-// function removeBgColor(element){
-//     const element = document.querySelector(element);
-//     element.classList.remove(`bg-rose-950`)
-// }
+function getElementValue(elementID) {
+  const element = document.getElementById(elementID);
+  const elementValue = element.innerText;
+  const value = parseInt(elementValue);
+  return value;
+}
+
+function setElementValue(elementID,value) {
+  const element = document.getElementById(elementID);
+  element.innerText = value;
+}
 
 function getRandomAlp() {
   const alpString = `abcdefghijklmnopqrstuvwxyz`;
