@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>alphaClash</title>
     <link rel="stylesheet" href="./ouput/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .poppins {
-        font-family: "Poppins", sans-serif;
+      .inter {
+        font-family: "Inter", sans-serif;
       }
       .anton {
         font-family: "Anton", sans-serif;
@@ -15,10 +24,11 @@
     </style>
   </head>
   <body
-    class="font-[poppins] bg-[#03045e] min-h-screen bg-[url(../images/background.png)] bg-no-repeat bg-center"
+    class="font-[inter] bg-[#03045e] min-h-screen bg-[url(../images/background.png)] bg-no-repeat bg-center"
   >
     <main>
-      <section id="home"
+      <section
+        id="home"
         class="flex flex-col justify-center items-center min-h-screen gap-10"
       >
         <h1 class="text-bold text-9xl text-white font-[anton] text-center">
@@ -28,13 +38,14 @@
           Unleash Your Keyboard Kung Fu : Press
           <span class="text-[#03045e]">“Enter”</span> to Play
         </h2>
-        <button id="playNow"
+        <button
+          id="playNow"
           class="btn glass text-xl tracking-[4px] text-white font-bold bg-[#003049] hover:bg-black my-6"
         >
           Play Now
         </button>
       </section>
-      <section id="playGround" class=" hidden">
+      <section id="playGround" class="hidden">
         <div class="flex flex-col items-center gap-16 pt-6">
           <div
             class="artboard artboard-horizontal phone-6 border-8 rounded-xl border-[#010313CC] bg-[#FFFFFFB3]"
@@ -47,7 +58,8 @@
               </p>
             </div>
             <div class="flex justify-center items-center h-full">
-              <p id="currentAlp"
+              <p
+                id="currentAlp"
                 class="text-black font[anton] text-9xl text-center font-extrabold"
               >
                 N
@@ -92,19 +104,22 @@
           <div class="flex justify-between w-3/4">
             <button class="btn glass text-white text-xl hover:bg-black">
               Life
-              <span><img src="./images/life-icon.svg" alt="Life-icon" /></span> <span id="gem">5</span>
+              <span><img src="./images/life-icon.svg" alt="Life-icon" /></span>
+              <span id="gem">5</span>
             </button>
             <button class="btn glass text-white text-xl hover:bg-black">
               Score
               <span
-                ><img src="./images/dollar-icon.svg " alt="dollar-icon" /></span
-              > <span id="score">0</span>
+                ><img src="./images/dollar-icon.svg " alt="dollar-icon"
+              /></span>
+              <span id="score">0</span>
             </button>
           </div>
         </div>
       </section>
-      <section id="scoreCard"
-        class=" flex justify-center items-center flex-col min-h-screen hidden"
+      <section
+        id="scoreCard"
+        class="flex justify-center items-center flex-col min-h-screen hidden"
       >
         <div
           class="flex flex-col items-center bg-gradient-to-r from-[#003049] to-[#ccd5ae] text-black rounded-lg p-14"
@@ -113,7 +128,8 @@
             <span class="font-extrabold">Score:</span>
             <span id="finalScore" class="font-medium">1</span>
           </h1>
-          <button onclick="playAgain()"
+          <button
+            onclick="playAgain()"
             class="btn glass text-black font-bold bg-[#003049] hover:bg-white my-6"
           >
             Play Again

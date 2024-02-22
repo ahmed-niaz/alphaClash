@@ -3,8 +3,6 @@
 //   home.classList.add(`hidden`)
 // }
 
-
-
 // const home = document.querySelector(`#home`);
 // const playGround = document.querySelector(`#playGround`);
 // home.addEventListener(`click`,function(){
@@ -15,9 +13,9 @@
 
 function gameLoop() {
   const randomAlp = getRandomAlp();
+  addBgColor(randomAlp);
   const currentAlp = document.querySelector(`#currentAlp`);
   currentAlp.innerText = randomAlp.toUpperCase();
-  addBgColor(randomAlp);
 }
 
 document.addEventListener(`keyup`, pressKeyBtn);
@@ -48,8 +46,8 @@ function pressKeyBtn(e) {
     const gem = getElementValue(`gem`);
     const downGrade = gem - 1;
     setElementValue(`gem`, downGrade);
-    if(downGrade === 0){
-      gameOver()
+    if (downGrade === 0) {
+      gameOver();
     }
   }
 }
@@ -61,19 +59,21 @@ playNow.addEventListener(`click`, function () {
   gameLoop();
 });
 
-function gameOver(){
+function gameOver() {
   hideElement(`#playGround`);
   showElement(`#scoreCard`);
   const finalScore = getElementValue(`score`);
-  setElementValue(`finalScore`,finalScore);
+  setElementValue(`finalScore`, finalScore);
+  // hide previous alp
+  const displayAlp = document.getElementById(`currentAlp`);
+  removeBgColor(displayAlp);
 }
 
-function playAgain(){
+function playAgain() {
   hideElement(`#scoreCard`);
   showElement(`#playGround`);
-  gameLoop()
+  gameLoop();
   // location.reload()
   setElementValue(`gem`, 5);
   setElementValue(`score`, 0);
 }
-

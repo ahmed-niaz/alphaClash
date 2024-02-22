@@ -11,18 +11,17 @@ function showElement(elementID) {
 }
 
 function addBgColor(elementID) {
-  // const element = document.getElementById(elementID);
-  const element = document.querySelector(`#${elementID}`);
-  element.classList.add(`bg-rose-950`);
-  element.classList.add(`text-white`);
+  const element = document.getElementById(elementID);
+  element.classList.add(`bg-[#e63946]`);
+  element.classList.add(`text-[#f1faee]`);
   element.classList.add(`font-bold`);
 }
 
 function removeBgColor(elementID) {
-  // const element = document.getElementById(elementID);
-  const element = document.querySelector(`#${elementID}`);
-  element.classList.remove(`bg-rose-950`);
-  element.classList.remove(`text-white`);
+  const element = document.getElementById(elementID);
+
+  element.classList.remove(`bg-[#e63946]`);
+  element.classList.remove(`text-[#f1faee]`);
   element.classList.remove(`font-bold`);
 }
 
@@ -33,7 +32,7 @@ function getElementValue(elementID) {
   return value;
 }
 
-function setElementValue(elementID,value) {
+function setElementValue(elementID, value) {
   const element = document.getElementById(elementID);
   element.innerText = value;
 }
